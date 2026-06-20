@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Запись на консультацию</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #f5f5f5;
+      color: #1a1a1a;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    main {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+      padding: 2.5rem;
+      width: 100%;
+      max-width: 480px;
+    }
+
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      margin-bottom: 1.75rem;
+      text-align: center;
+    }
+
+    ol {
+      list-style: none;
+      counter-reset: item;
+    }
+
+    li {
+      counter-increment: item;
+      margin-bottom: 1.25rem;
+    }
+
+    li::before {
+      content: counter(item) ". ";
+      font-weight: 600;
+      color: #555;
+    }
+
+    label {
+      display: block;
+      font-size: 0.95rem;
+      margin-bottom: 0.4rem;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.65rem 0.85rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.2s;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #4a7cff;
+    }
+
+    button {
+      width: 100%;
+      margin-top: 0.5rem;
+      padding: 0.75rem 1rem;
+      border: none;
+      border-radius: 8px;
+      background: #4a7cff;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    button:hover {
+      background: #3a6ae8;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Запись на консультацию</h1>
+    <form>
+    <ol>
+      <li>
+        <label for="lastname">Фамилия</label>
+        <input type="text" id="lastname" name="lastname" autocomplete="family-name">
+      </li>
+      <li>
+        <label for="firstname">Имя</label>
+        <input type="text" id="firstname" name="firstname" autocomplete="given-name">
+      </li>
+      <li>
+        <label for="phone">Телефон</label>
+        <input type="tel" id="phone" name="phone" autocomplete="tel">
+      </li>
+      <li>
+        <label for="email">Адрес электронной почты</label>
+        <input type="email" id="email" name="email" autocomplete="email">
+      </li>
+    </ol>
+    <button type="submit">Отправить</button>
+    </form>
+  </main>
+</body>
+</html>
